@@ -35,7 +35,7 @@ public class StormStrikeEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         Random rand = new Random();
-        int random = rand.nextInt(20);
+        int random = rand.nextInt(100);
         BlockPos blockPos = target.getBlockPos();
         if (random < level && target.getWorld().isSkyVisible(blockPos) && EnchantmentsPlus.CONFIG_HOLDER.getConfig().enableStormStrike) {
             LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(target.getWorld());
